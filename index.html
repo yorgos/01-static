@@ -1,0 +1,530 @@
+<!DOCTYPE html><!--defining the document type for the browser to read-->
+<html lang="en"><!--definition of webpage language-->
+
+  <!--HEAD-->
+  <head>
+    <!-- The following 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!--Metadata set 1: Choice of character encoding for the browser to read-->
+    <meta charset="utf-8">
+
+    <!--Metadata set 2: Options for making the webpage responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Metadata set 3: Microsoft IE compatibility-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Microsoft IE compatibility-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--Linking a normalize.css file to improve the way my webpage styling behaves across browsers. We are not doing it here as it is included inside Bootstrap that follows
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">-->
+
+    <!--Bootstrap framework-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!--Google Fonts-->
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Questrial|Playfair+Display&subset=latin-ext,cyrillic,latin'>
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!--Custom styles for this page-->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!--Webpage title:very important for search engines and so far the only element from the head section of an html file that the user can actually read. It is presented in the top of the browser tab next to the Favicon-->
+    <title>Homepage</title>
+  </head><!--End of HEAD-->
+
+
+  <!--BODY-->
+  <body data-spy="scroll" data-target=".navbar"><!--data-spy=scroll used to map certain parts of a long page to the menu options of the navbar-->
+
+    <!--NAVIGATION BAR-->
+    <!--Collect the nav links, forms, and other content for toggling-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="centered80percent"><!--class for centering content-->
+
+          <!--Mobile friendly navigation bar-->
+          <div class="navbar-header">
+            <!--Navbar button  that only appears when the navigation bar is collapsed-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <!--The bootstrap class sr-only is for hidden information targeted at screen readers, to allow for accessibility for people with vision problems-->
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <!--bootstrap class that automatically styles its content as a brand, logo etc-->
+            <div class="project navbar-brand">
+              <!-- Alternatively <img alt="Brand" src="http://placehold.it/25x25"> -->
+              <a href="#">Project</a>
+            </div><!--End of project navbar-brand-->
+          </div><!--End of navbar-header-->
+
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+
+              <li class="active"><a href="#">Home</a></li>
+
+              <!--dropdown menu in the WORK tab-->
+              <li class="dropdown" role="presentation">
+                <a class="dropdown-toggle" id="work-dropdown" data-toggle="dropdown" data-scroll-to="#work" href="#" aria-haspopup="true" aria-expanded="false">Work</a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#most-recent-work-header">Most Recent Work</a></li>
+                    <li><a href="#other-work-header">Other Work</a></li>
+                  </ul>
+              </li><!--End of dropdown menu in the WORK tab-->
+
+              <li><a href="#about">About</a></li>
+              <li><a href="#learn-more">Learn More</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul><!--End of navbar-right-->
+          </div><!--End of navbar-collapse-->
+
+        </div><!--End of centered80percent-->
+      </div><!--End of container-fluid-->
+    </nav><!--End of NAVIGATION BAR-->
+
+    <!--CAROUSEL-->
+    <section id="carousel-id" class="container">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" data-interval="3840" role="listbox">
+          <!--Image1 ACTIVE + caption1-->
+          <div class="item active">
+            <img src="img/portfolioheroimage1.jpg" alt="carousel image-1">
+            <div class="carousel-caption">
+              <h1> A designer's desk... </h1>
+            </div><!--End of carousel-caption-->
+          </div><!--End of image1 + caption1-->
+
+          <!--Image2 + caption2-->
+          <div class="item">
+            <img src="img/portfolioheroimage2.jpg" alt="carousel image 2">
+            <div class="carousel-caption">
+              <h1> A vintage typewriter...</h1>
+            </div><!--End of carousel-caption-->
+          </div><!--End of image2 + caption2-->
+
+          <!-- Image3 + caption3-->
+          <div class="item">
+            <img src="img/portfolioheroimage3.jpg" alt="carousel image 3">
+            <div class="carousel-caption">
+              <h1> All this mess... </h1>
+            </div><!--End of carousel-caption-->
+          </div><!--End of image3 + caption3-->
+        </div><!--End of carousel-inner-->
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div><!--End of carousel-->
+    </section><!--End of section CAROUSEL-->
+
+    <!--INTRODUCTION-->
+    <section class="container anchor" id="introduction">
+      <div class=" centered80percent"><!--Class for centering content-->
+        <div class="row">
+
+          <div class="col-md-4 col-xs-12">
+            <h2> Polaroid </h2>
+            <!--Tooltip-->
+            <p> cornhole tumblr irony polaroid retro tattooed leggings. Kitsch squid <a href="#" title="Laplace is a certain thing. It is used for doing that." id="tooltip1">laplace</a> ramps microdosing, taxidermy brunch offal chicharrones artisan. </p>
+            <p><button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Further details on this can be found here"> View details &raquo;</button></p>
+          </div><!--End of col-->
+
+          <div class="col-md-4 col-xs-12">
+            <h2> Taxidermy </h2>
+            <p> Neutra asymmetrical cardigan squid church-key polaroid authentic meggings letterpress vegan. Vegan nisi keffiyeh lomo, banh mi pabst neutra beard gastropub kombucha hashtag blog. Freegan anim occupy shoreditch, yr literally marfa synth green juice squid blog next level meditation. </p>
+            <!--Tooltip-->
+            <p><button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Further details on this can be found here"> View details &raquo;</button></p>
+          </div><!--End of col-->
+
+          <div class="col-md-4 col-xs-12">
+            <h2> Normcore </h2>
+            <p> Lo-fi laborum fanny pack, cronut freegan wayfarers knausgaard aliqua small batch godard ullamco gluten-free. Non everyday carry tofu et distillery. </p>
+            <p><button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Further details on this can be found here"> View details &raquo;</button></p>
+          </div><!--End of col-->
+
+        </div><!--End of row-->
+      </div><!--End of centered80percent-->
+    </section><!--End of section INTRODUCTION-->
+
+    <!--WORK-->
+    <section class="container anchor" id="work">
+      <div class="centered80percent"><!--class for centering content-->
+
+        <!--Work header-->
+        <header class="work-header" id="work-header">
+          <h1>Work</h1>
+        </header><!--End of work-header-->
+
+        <!--Most recent work-->
+        <div class="row most-recent-work" id="most-recent-work">
+          <!--Most recent work header-->
+          <header class="most-recent-work-header" id="most-recent-work-header">
+            <h3>Most Recent</h3>
+          </header><!--End of most-recent-work-header-->
+          <!--Most recent work content-->
+          <div class="embed-responsive  embed-responsive-16by9"><!--Video Embedding-->
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/i8WDpaAVfFY" allowfullscreen></iframe>
+          </div>
+        </div><!--End of most-recent-work-->
+
+        <!--Other work-->
+        <div class="row other-work" id="other-work">
+          <!--Other work header-->
+          <header class="other-work-header " id="other-work-header">
+            <h3>Other Work</h3>
+          </header><!--End of other-work-header-->
+
+          <!--Other work content
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="other-work-image"><img src="http://placehold.it/150x150" class="img-responsive"></div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="other-work-image"><img src="http://placehold.it/150x150" class="img-responsive"></div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="other-work-image"><img src="http://placehold.it/150x150" class="img-responsive"></div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="other-work-image"><img src="http://placehold.it/150x150" class="img-responsive"></div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="other-work-image"><img src="http://placehold.it/150x150" class="img-responsive"></div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="other-work-image"><img src="http://placehold.it/150x150" class="img-responsive"></div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="other-work-image"><img src="http://placehold.it/150x150" class="img-responsive"></div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-6">
+            <div class="other-work-image"><img src="http://placehold.it/150x150" class="img-responsive"></div>
+          </div>
+          End of other work content-->
+
+        </div><!--End of other work-->
+
+      </div><!--End of centered80percent-->
+    </section><!--End of section WORK-->
+
+    <!--ABOUT-->
+    <section class="container anchor" id="about">
+      <div class="centered80percent"><!--class for centering content-->
+        <header class="about-header">
+          <h1>About</h1>
+        </header><!--End of about-header-->
+
+        <!--Image-->
+        <div class="image col-md-4">
+          <img class="img-responsive" id="about-image" src="img/about.jpg" alt="skyscraper">
+        </div><!--End of div image-->
+
+        <!--Intro-->
+        <div class="about-intro-text col-md-4">
+          <h3>Introduction</h3>
+          <p>Lorem ipsum dolor sit amet, id nam vocent antiopam, minim explicari contentiones cum id. Et inani causae scripta cum, cu invenire indoctum urbanitas his. No pro vivendo nominati. Diam dicta ea eam, omnium aperiri discere ex sit. Laudem iuvaret molestiae ad qui.
+          </p>
+        </div><!--End of div column introduction-->
+
+        <!--Skills-->
+        <div class="about-skills-text col-md-4">
+          <!--Hover tooltip here-->
+          <h3 class="skill-h3">Skills</h3>
+
+          <ul type="square" id="skill-list">
+            <li> Skill first cu invenire indoctum</li>
+            <li> Second skill explicari contentiones</li>
+            <li> Skill number three explicari cum</li>
+            <li> My fourth skill Lorem ipsum dolor</li>
+          </ul>
+        </div><!--End of div column skills-->
+
+        <!--Story-->
+        <div class="about-main-text">
+        <h3>Story</h3>
+          <p>Street art try-hard shabby chic flexitarian lomo. Meh health goth food truck heirloom, beard shabby chic artisan godard church-key celiac man braid swag mumblecore. Shoreditch blog brooklyn butcher, 3 wolf moon knausgaard mlkshk cold-pressed art party farm-to-table dreamcatcher thundercats. Cray banjo heirloom poutine, ethical semiotics cornhole tumblr irony polaroid retro tattooed leggings. Kitsch squid ramps microdosing, taxidermy brunch offal chicharrones artisan. Freegan marfa readymade deep v. Tacos iPhone disrupt affogato.
+          </p>
+        </div><!--End of about-main-text-->
+      </div><!--End of centered80percent content-->
+    </section><!--End of container ABOUT-->
+
+    <!--LEARN MORE-->
+    <section class="container anchor learn-more" id="learn-more">
+      <div class="centered80percent"><!--class for centering content-->
+        <div class="row">
+          <!--Learn more header-->
+          <header class="learn-more-header">
+            <h1>Learn More</h1>
+          </header><!--End of learn-more-header-->
+
+          <!--The trigger for the modal is a button-->
+          <div class="modal-button">
+            <!--Modal button -->
+            <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal">View PDF</button>
+          </div>
+
+          <!--Large modal implemented for presenting additional info-->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">PDF Info</h4>
+                </div>
+                <div class="modal-body">
+                  <embed id="modalembed" src="docs/sublimetext-useful-shortcuts.pdf">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+              </div><!--End of modal-content-->
+            </div><!--End of modal-dialog modal-lg-->
+          </div><!--End of modal fade-->
+        </div><!--End of row-->
+
+        <!--Accordion-->
+        <!--Debugged accordion taken from the course-->
+        <div class="panel-group" id="accordion">
+
+          <!--Question One-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
+                  Question One proident Ad vegan excepteur
+                </a>
+              </h4>
+            </div><!--End of panel-heading Question One-->
+
+            <div id="collapse-1" class="panel-collapse collapse"><!--class *in* removed in order for the accordion to stay closed by default-->
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div><!--End of panel-body-->
+            </div><!--End of collapse-1-->
+          </div><!--End of panel panel-default Question One-->
+
+          <!--Question Two-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2">
+                  Question Two ad squid. 3 wolf moon officia aute
+                </a>
+              </h4>
+            </div><!--end of panel-heading Question Two-->
+
+            <div id="collapse-2" class="panel-collapse collapse"><!--class *in* removed in order for the accordion to stay closed by default-->
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div><!--End of panel-body-->
+            </div><!--End of collapse-2-->
+          </div><!--end of panel panel-default Question Two-->
+
+          <!--Question Three-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-3">
+                  Question Three nulla assumenda shoreditch
+                </a>
+              </h4>
+            </div><!--end of panel-heading Question Three-->
+
+            <div id="collapse-3" class="panel-collapse collapse"><!--class *in* removed in order for the accordion to stay closed by default-->
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div><!--End of panel-body-->
+            </div><!--End of collapse-3-->
+          </div><!--End of panel panel-default Question Three-->
+
+          <!--Question Four-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-4">
+                  Question Four haven't heard of them accusamus labore
+                </a>
+              </h4>
+            </div><!--End of panel-heading Question Four-->
+
+            <div id="collapse-4" class="panel-collapse collapse"><!--class *in* removed in order for the accordion to stay closed by default-->
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div><!--End of panel-body-->
+            </div><!--End of collapse-4-->
+          </div><!--end of panel panel-default Question Four-->
+
+          <!--Question Five-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-5">
+                  Question Five skateboard dolor brunch. Food truck quinoa aesthetic synth nesciunt
+                </a>
+              </h4>
+            </div><!--end of panel-heading Question Five-->
+
+            <div id="collapse-5" class="panel-collapse collapse"><!--class *in* removed in order for the accordion to stay closed by default-->
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <br>
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div><!--End of panel-body-->
+            </div><!--End of collapse-5-->
+          </div><!--End of panel panel-default Question Five-->
+
+        </div><!--End of panel-group-->
+      </div> <!--End of centered80percent-->
+    </section><!--End of section LEARN MORE-->
+
+
+    <!--CONTACT-->
+    <!--Implementation of paralax using paralax.js from http://pixelcog.github.io/parallax.js/ -->
+    <section class="container anchor parallax-window" id="contact" data-parallax="scroll" data-image-src="img/contact.jpg" data-speed="0.5">
+
+      <div class="centered80percent">
+
+        <header class="contact-header">
+          <h1>Contact</h1>
+        </header><!--End of contact-header-->
+
+        <!--Google Maps Embed API Web Browser
+        <div class="grayscale-map">
+        <iframe width=100% height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJiQnyVcZRqEcRY0xnhE77uyY&key=AIzaSyAyKAboaUxan26HEaMG1xiW920tt6bevAw" allowfullscreen></iframe>
+        </div><!-End of grayscale-map-->
+
+        <!--Google maps body-->
+        <div id="map"></div>
+        <div id="capture"></div>
+
+        <!--Address Details-->
+        <div class="col-lg-4 col-md-4 col-sm-10 col-xs-12 address">
+          <h3>Contact details</h3>
+          <p class="address-details">
+            <span class="glyphicon glyphicon-envelope"></span> &thinsp; example [at] berlin.com
+            <br>
+            <span class="glyphicon glyphicon-earphone"></span> &thinsp; +49 (0)30 1234 5678
+            <br>
+            <br>
+            <a href="https://www.google.gr/maps/place/Brandenburg+Gate/@52.5162746,13.377704,15z/data=!4m5!3m4!1s0x0:0x26bbfb4e84674c63!8m2!3d52.5162746!4d13.377704">
+            <span class="glyphicon glyphicon glyphicon-map-marker"></span> &thinsp; Brandenburger Gate</a>
+            <p>&thinsp;Pariser Platz<br>&thinsp;10117 Berlin<br>&thinsp;Germany</p>
+          </p>
+        </div><!--End of address-->
+
+        <!--Contact Form. Original taken from: http://bootsnipp.com/snippets/ype58-->
+        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12 form">
+          <h3>Contact form</h3>
+          <form class="form-fields">
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="true">
+              <label for="name" class="sr-only">Name</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="true">
+              <label for="email" class="sr-only">Email Adress</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" required="false">
+              <label for="phone" class="sr-only">Phone</label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required="true">
+              <label for="subject" class="sr-only">Subject</label>
+            </div>
+
+            <div class="form-group">
+              <textarea style="resize:none" cols="40" class="form-control message-box" type="textarea" id="message" placeholder="Message" maxlength="300" rows="5" required="required"></textarea>
+              <label for="message" class="sr-only">Message</label>
+            </div>
+
+            <p id="visible-comment"></p><!--Feedback for the user after sending a message-->
+            <p id="char-count"></p><!--Feedback for the user while writing a message-->
+
+            <button type="button" id="send" name="send" class="btn btn-primary pull-right">Send</button>
+          </form><!--End of form-->
+        </div><!--End of div col-md-6 col-sm-12 col-xs-12 form-->
+      </div><!--End of div centered80percent-->
+    </section><!--End of section CONTACT-->
+
+    <!--FOOTER-->
+    <footer class="footer-distributed">
+        <div class="centered80percent"><!--class for centering content-->
+
+          <div class="social footer-right">
+             <!-- <p class="social">Connect with us</p> -->
+            <a href="https://www.facebook.com/facebook"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/twitter?lang=en"><i class="fa fa-twitter"></i></a>
+          </div><!--End of footer right-->
+
+          <div class="footer-left">
+            <p class="footer-links">
+              <a href="#home">Home</a>
+              <a href="#work">Work</a>
+              <a href="#about">About</a>
+              <a href="#learn-more">Learn More</a>
+              <a href="#contact">Contact</a>
+            </p>
+
+            <p>Company Name Ltd &copy; 2016</p>
+          </div><!--End of footer left-->
+
+        </div><!--End of centered80percent-->
+    </footer><!--End of FOOTER-->
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!--BOOTSTRAP CORE JS-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--Linking Plugin for Parallax effect in contact section-->
+    <!-- <script src="js/jquery.stellar.min.js"></script> -->
+    <script src="js/parallax.min.js"></script>
+
+    <!--Linking Work Javascript-->
+    <script src="js/work.js"></script>
+
+    <!--Linking custom Javascript-->
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <!--Google maps Javascript-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ1am6aDROK23eD66GZlVkjrp-ttb2Jjg&callback=initMap"
+    async defer></script>
+
+  </body><!--End of BODY-->
+</html>
