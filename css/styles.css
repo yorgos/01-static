@@ -259,8 +259,11 @@ header h1 {
 }
 
 .carousel-caption h1 {
-  text-shadow: 0;
   padding-bottom: 20%;
+}
+
+.carousel-caption {
+  text-shadow: 0  0px 0px;
 }
 
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
